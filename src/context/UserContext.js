@@ -8,7 +8,7 @@ export const UserContextProvider = (props) => {
   const [records, setRecords] = useState([]);
   const [authIsDone, setAuthIsDone] = useState(false);
   const [orders, setOrders] = useState([]);
-  const [cartCounter, setCartCounter] = useState('');
+  const [cartCounter, setCartCounter] = useState();
 
   useEffect(() => {
     console.log('Context is trying to authenticate the user');

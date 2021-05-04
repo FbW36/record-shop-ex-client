@@ -27,8 +27,8 @@ const AddToCart = ({ data }) => {
   };
 
   return (
-    <div className='add-to-cart'>
-      <FontAwesomeIcon icon={faPlus} onClick={addRecordToCart} />
+    <div className='add-to-cart' onClick={addRecordToCart}>
+      <FontAwesomeIcon icon={faPlus} />
     </div>
   );
 };

@@ -19,6 +19,7 @@ const OrderHistory = () => {
     get();
   }, []);
 
+  console.log('OOORDERS', orders);
   const orderList = orders.map((order) => {
     return <Order data={order}></Order>;
   });

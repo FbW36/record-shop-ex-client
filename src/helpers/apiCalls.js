@@ -28,6 +28,11 @@ export const updateUser = async (data, id) => {
   return res;
 };
 
+export const sendOrder = async (data, id) => {
+  const res = await axios.post(`/users/${id}/orders`, data);
+  return res.data;
+};
+
 export const getOrders = async (id) => {
   const res = await axios.get(`/users/${id}/orders`);
   return res.data;

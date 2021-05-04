@@ -3,7 +3,6 @@ import { fetchRecords } from '../helpers/apiCalls';
 import { UserContext } from '../context/UserContext';
 import { useContext } from 'react';
 import Record from './Record';
-import { Redirect } from 'react-router';
 
 const Dashboard = () => {
   const { records, setRecords, userStatus } = useContext(UserContext);

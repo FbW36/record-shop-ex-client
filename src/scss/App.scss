@@ -10,6 +10,19 @@ $notHorribleRed: rgb(172, 27, 27);
 
 .main {
   height: 100%;
+  .loading {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 400px;
+    }
+  }
   .homepage {
     section {
       background-image: url('../statics/recordshop.jpeg');
@@ -202,6 +215,8 @@ $notHorribleRed: rgb(172, 27, 27);
         display: flex;
         .left {
           width: 50%;
+          max-height: 600px;
+          overflow: auto;
           .record {
             display: flex;
             align-items: flex-start;
@@ -239,7 +254,7 @@ $notHorribleRed: rgb(172, 27, 27);
           margin-left: 10px;
           padding: 20px;
           img {
-            width: 200px;
+            width: 180px;
           }
           .total {
             p {
@@ -253,6 +268,7 @@ $notHorribleRed: rgb(172, 27, 27);
             .amount {
               font-size: 30px;
               font-weight: 800;
+              margin-bottom: 20px;
             }
           }
         }

@@ -15,7 +15,7 @@ const Order = ({ data }) => {
         </div>
         <div className='price'>
           <p>TOTAL</p>
-          <p>{parseFloat(pricePerRecord).toPrecision(5)} $</p>
+          <p>{parseFloat(pricePerRecord).toPrecision(3)} $</p>
         </div>
       </div>
     );
@@ -25,7 +25,7 @@ const Order = ({ data }) => {
     <div className='order'>
       <div className='general-info'>
         <p>{data.creationDateBeautified}</p>
-        <p>{data.orderPrice} $</p>
+        <p>{parseFloat(data.orderPrice).toPrecision(3)} $</p>
       </div>
       <div className='albums'>{albumsList}</div>
     </div>

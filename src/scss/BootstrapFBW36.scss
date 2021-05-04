@@ -20,6 +20,28 @@
   color: $color2;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+button {
+  cursor: pointer;
+}
 html,
 body,
 #root,
@@ -124,6 +146,17 @@ nav {
       }
     }
   }
+}
+
+.main-button {
+  background: $color3;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  margin: 10px;
 }
 
 form {
