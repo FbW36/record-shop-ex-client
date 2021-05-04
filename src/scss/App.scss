@@ -156,9 +156,164 @@ $notHorribleRed: rgb(172, 27, 27);
         grid-auto-flow: row;
         .record {
           box-shadow: 0px 0px 10px #00000041;
+          position: relative;
           img {
             width: 100%;
-            object-fit: cover;
+            height: 100%;
+          }
+          .add-to-cart {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            cursor: pointer;
+
+            transition: all 0.2s;
+            svg path {
+              color: white;
+            }
+            &:hover {
+              background: white;
+              svg path {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cart {
+    background: white;
+    color: black;
+    height: 100%;
+    section {
+      height: 100%;
+      padding: 120px 20px 80px 20px;
+      display: flex;
+      flex-direction: column;
+      .current-order {
+        display: flex;
+        .left {
+          width: 50%;
+          .record {
+            display: flex;
+            align-items: flex-start;
+            background: black;
+            margin-bottom: 10px;
+            padding: 10px;
+            .img {
+              img {
+                height: 130px;
+                margin-right: 10px;
+              }
+            }
+            .info {
+              p {
+                color: white;
+                margin: 0;
+              }
+              .artist {
+                margin-top: 5px;
+                font-weight: 800;
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+        .right {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: center;
+          background: black;
+          margin-bottom: 10px;
+          margin-left: 10px;
+          padding: 20px;
+          img {
+            width: 200px;
+          }
+          .total {
+            p {
+              color: white;
+              margin: 0;
+            }
+            .header {
+              margin-top: 20px;
+              font-size: 15px;
+            }
+            .amount {
+              font-size: 30px;
+              font-weight: 800;
+            }
+          }
+        }
+      }
+      .order-history {
+        margin-top: 120px;
+
+        .order {
+          margin-bottom: 80px;
+          .general-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-bottom: 5px solid black;
+            p {
+              font-weight: 600;
+              font-size: 16px;
+              margin: 0;
+            }
+          }
+          .albums {
+            .record {
+              display: flex;
+              margin-bottom: 10px;
+              background: $color5;
+              height: 200px;
+
+              .cover {
+                img {
+                  height: 100%;
+
+                  margin-right: 10px;
+                }
+              }
+              .info {
+                flex-grow: 15;
+                p {
+                  color: white;
+                  &:nth-child(2) {
+                    font-weight: 800;
+                  }
+                }
+              }
+              .price {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 10px;
+                align-items: flex-end;
+                p {
+                  margin: 0;
+                  color: white;
+                  &:first-child {
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
           }
         }
       }

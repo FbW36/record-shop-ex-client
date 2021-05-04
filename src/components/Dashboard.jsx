@@ -17,8 +17,6 @@ const Dashboard = () => {
     getData();
   }, [setRecords]);
 
-  if (!userStatus) return <Redirect to='/login' />;
-
   const recordsList = records.map((record) => (
     <Record key={record._id} data={record}></Record>
   ));

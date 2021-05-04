@@ -18,7 +18,6 @@ const Login = () => {
     const res = await signUpUser(data);
     if (!res.error) {
       setUser(res.data);
-      setUserStatus(true);
       history.push('/dashboard');
     }
   };

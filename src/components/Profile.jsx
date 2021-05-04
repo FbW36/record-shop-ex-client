@@ -15,7 +15,7 @@ import { updateUser } from '../helpers/apiCalls';
 
 const Profile = () => {
   const { register, handleSubmit, errors } = useForm();
-  const { user, setUser, setUserStatus, userStatus } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const history = useHistory();
 
@@ -26,7 +26,6 @@ const Profile = () => {
     }
   };
 
-  if (!userStatus) return <Redirect to='/' />;
   const avatarCode = user.avatar.slice(-6, -4);
 
   const updateAvatar = async (e) => {

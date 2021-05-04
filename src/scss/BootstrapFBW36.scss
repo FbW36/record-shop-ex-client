@@ -67,6 +67,28 @@ nav {
           font-size: small;
           font-weight: 700;
         }
+        .cnt {
+          position: absolute;
+          p {
+            color: white;
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              z-index: -1;
+              border-radius: 50%;
+
+              background-color: $color3;
+            }
+          }
+        }
       }
       .button-bg {
         background: white;

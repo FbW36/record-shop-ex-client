@@ -7,7 +7,7 @@ import { loginUser } from '../helpers/apiCalls';
 
 const Login = () => {
   const { register, handleSubmit, errors } = useForm();
-  const { setUser, setUserStatus, userStatus } = useContext(UserContext);
+  const { setUser, userStatus } = useContext(UserContext);
 
   const history = useHistory();
 
@@ -16,7 +16,6 @@ const Login = () => {
     const res = await loginUser(data);
     if (!res.error) {
       setUser(res.data);
-      setUserStatus(true);
       history.push('/dashboard');
     }
   };
@@ -35,7 +34,7 @@ const Login = () => {
                 <input
                   name='email'
                   placeholder='Email'
-                  defaultValue='Judd_Ryan@hotmail.com'
+                  defaultValue='Emery.Cassin2@gmail.com'
                   ref={register({
                     required: 'Please put your email sir.',
                     pattern: {
@@ -51,7 +50,7 @@ const Login = () => {
                   name='password'
                   type='password'
                   placeholder='Password'
-                  defaultValue='0123456789'
+                  defaultValue='Bebeabea123!@#'
                   ref={register({
                     required: 'Required',
                     minLength: {
